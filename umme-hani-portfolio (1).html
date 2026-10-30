@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Umme Hani Saghar | Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f0ee;--card:#fff;--ink:#2a2523;--mute:#6b605b;--brown:#7a4a12;--rose:#e8c9c6;--accent:#4a45d6;--line:#e4d8d4;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1d1918;--card:#292322;--ink:#f1e9e6;--mute:#b3a6a1;--brown:#e0b070;--rose:#4a3533;--accent:#9d99ff;--line:#3d3331;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#1d1918;--card:#292322;--ink:#f1e9e6;--mute:#b3a6a1;--brown:#e0b070;--rose:#4a3533;--accent:#9d99ff;--line:#3d3331;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Lora,Georgia,"Times New Roman",serif;line-height:1.65}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--card);z-index:30}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--card);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:6px;padding:10px 16px;overflow-x:auto}
+nav .logo{font-weight:600;color:var(--brown);margin-right:auto;white-space:nowrap}
+nav a{color:var(--ink);text-decoration:none;padding:6px 14px;border-radius:20px;font-size:.92rem;white-space:nowrap}
+nav a.on,nav a:hover{background:var(--rose)}
+#mode{border:1px solid var(--line);background:none;color:var(--ink);border-radius:50%;width:34px;height:34px;cursor:pointer;font-size:1rem}
+.wrap{max-width:980px;margin:0 auto;padding:0 18px}
+.hero{background:linear-gradient(135deg,var(--rose),var(--bg));padding:64px 0 48px}
+.hero h1{font-size:clamp(2rem,6vw,3.4rem);margin:0 0 8px;letter-spacing:.5px}
+.hero p{margin:4px 0;color:var(--mute)}
+.tag{font-style:italic;color:var(--brown);margin-top:18px!important;font-size:1.15rem}
+.btns{margin-top:22px;display:flex;gap:10px;flex-wrap:wrap}
+.btn{background:var(--accent);color:#fff;border:0;padding:10px 20px;border-radius:24px;text-decoration:none;font:inherit;cursor:pointer}
+.btn.alt{background:none;color:var(--ink);border:1px solid var(--accent)}
+:root[data-theme="dark"] .btn,:root:not([data-theme="light"]) .btn{color:#14122e}
+section.view{display:none;padding:34px 0 60px;animation:in .45s ease}
+section.view.on{display:block}
+@keyframes in{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+h2{color:var(--brown);font-size:1.7rem;margin:0 0 6px}
+h3{color:var(--brown);margin:0 0 6px}
+.sub{color:var(--mute);font-style:italic;margin:0 0 22px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 22px;margin-bottom:16px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:26px 0}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;text-align:center}
+.stat b{display:block;font-size:2.1rem;color:var(--accent)}
+.stat span{font-size:.85rem;color:var(--mute)}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}
+.tab{border:1px solid var(--line);background:var(--card);color:var(--ink);padding:8px 18px;border-radius:20px;cursor:pointer;font:inherit}
+.tab.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+:root:not([data-theme="light"]) .tab.on{color:#14122e}
+.pane{display:none}.pane.on{display:block;animation:in .35s ease}
+.q{font-style:italic;color:var(--brown);margin-top:14px}
+ul{padding-left:20px;margin:8px 0}li{margin:5px 0}
+details{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:6px 20px;margin-bottom:14px}
+summary{cursor:pointer;font-weight:600;color:var(--brown);padding:12px 0;font-size:1.1rem}
+details p{margin:6px 0}
+.badge{display:inline-block;font-size:.75rem;background:var(--rose);border-radius:12px;padding:2px 10px;margin-left:8px;color:var(--ink);font-weight:400}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.chip{background:var(--rose);border-radius:16px;padding:5px 14px;font-size:.9rem}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.cs[hidden]{display:none}
+footer{text-align:center;color:var(--mute);padding:26px 18px;border-top:1px solid var(--line);font-size:.9rem}
+footer a{color:var(--accent)}
+@media print{nav,.btns,.tabs,#mode{display:none}section.view{display:block!important}}
+</style>
+</head>
+<body>
+<nav>
+  <span class="logo">Umme Hani Saghar</span>
+  <a href="#home" data-v="home">Home</a><a href="#projects" data-v="projects">Projects</a><a href="#courses" data-v="courses">Courses</a><a href="#writing" data-v="writing">Writing</a><a href="#resume" data-v="resume">Resume</a>
+  <button id="mode" aria-label="Toggle dark mode">◐</button>
+</nav>
+
+<section class="view" id="v-home">
+  <div class="hero"><div class="wrap">
+    <h1>UMME HANI SAGHAR</h1>
+    <p>B.Tech Computer Science Engineering</p>
+    <p>Specialization: Artificial Intelligence &amp; Data Engineering</p>
+    <p>Vellore Institute of Technology, Vellore | Batch 2026–2030</p>
+    <p class="tag">Curious mind. Consistent effort. Creative heart.</p>
+    <div class="btns"><a class="btn" href="#projects">View my projects</a><a class="btn alt" href="#resume">See my resume</a></div>
+  </div></div>
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat"><b data-n="98">0</b><span>Percentile, COMEDK</span></div>
+      <div class="stat"><b data-n="98">0</b><span>Percentile, MHT-CET</span></div>
+      <div class="stat"><b data-n="91">0</b><span>Percentile, JEE Main</span></div>
+      <div class="stat"><b data-n="91" data-s="%">0</b><span>Class XII, School Topper</span></div>
+    </div>
+    <h2>About Me</h2>
+    <div class="card">
+      <p>I am a first-year B.Tech Computer Science Engineering student at Vellore Institute of Technology, specializing in Artificial Intelligence and Data Engineering. I am a disciplined, hardworking learner with a strong academic record: I qualified for JEE Advanced, scored in the 98th percentile in both COMEDK and MHT-CET, and was my school’s Class XII topper.</p>
+      <p>I am passionate about building technology that solves real-world problems. Currently, I am learning Python and working on an offline emergency communication network that helps people send high-priority messages during network outages.</p>
+      <p>Beyond academics, I enjoy baking, public speaking, debating, dancing and badminton. I believe creativity and communication make a stronger engineer.</p>
+    </div>
+    <div class="tabs" role="tablist">
+      <button class="tab on" data-p="ach">Achievements</button><button class="tab" data-p="str">Strengths</button><button class="tab" data-p="goal">Goals</button>
+    </div>
+    <div class="card pane on" id="ach"><ul>
+      <li>Qualified for JEE Advanced, one of India’s toughest engineering exams</li><li>98th percentile in both COMEDK and MHT-CET</li><li>91st percentile in JEE Main</li><li>School Topper in Class XII (91%) and 95.6% in Class X</li><li>Consistently in the top 3–5% of my class, and a UCMAS graduate</li></ul>
+      <p class="q">“Results that reflect consistency, not luck.”</p></div>
+    <div class="card pane" id="str"><ul>
+      <li>Disciplined, hardworking and consistent under pressure</li><li>Confident communicator, with experience in MUN and speech competitions</li><li>Fast learner who picks up new skills like Python quickly</li><li>Sharp focus and mental agility from UCMAS training</li><li>Creative and detail-oriented, from baking, makeup and dance</li></ul>
+      <p class="q">“Logic in my thinking, creativity in my approach.”</p></div>
+    <div class="card pane" id="goal"><ul>
+      <li>Become a skilled AI and Data Engineering professional with deep, hands-on expertise</li><li>Build and launch my own tech-driven startup that solves real problems</li><li>Turn my offline emergency communication project into a real-world, life-saving solution</li><li>Win hackathons and startup competitions, and join innovation cells at VIT</li><li>Lead and mentor teams as a confident communicator and decision-maker</li></ul>
+      <p class="q">“I don’t just want to work for great ideas. I want to build them.”</p></div>
+  </div>
+</section>
+
+<section class="view" id="v-projects"><div class="wrap">
+  <h2>Projects</h2><p class="sub">Tap a project to open its details.</p>
+  <details open><summary>Offline Emergency Communication Network <span class="badge">MDP · In Progress</span></summary>
+    <p><b>The Problem:</b> During disasters, cellular and internet networks often fail, leaving people unable to call for help.</p>
+    <p><b>My Solution:</b> An offline communication network that lets people send short, high-priority emergency messages to a rescue center without relying on cellular or internet connectivity.</p>
+    <p><b>Key Features</b></p><ul><li>Works without mobile network or internet</li><li>Short messages designed for fast, clear emergency alerts</li><li>High-priority delivery to a rescue center</li><li>Built for low-resource, real-world conditions</li></ul>
+    <p><b>Technologies Used:</b> Python, microcontroller, wireless communication</p>
+    <p><b>My Role:</b> Team member contributing to programming.</p>
+    <p><b>Current Status:</b> Design and development in progress</p>
+    <p><b>What I’m Learning:</b> Problem-solving under real-world constraints, teamwork, and applying engineering to social impact.</p>
+  </details>
+  <details><summary>Restaurant Billing System <span class="badge">Personal · Completed</span></summary>
+    <p><b>The Objective:</b> To apply my programming skills to a real-world business problem: making restaurant billing faster and more accurate.</p>
+    <p><b>What It Does:</b> A billing program that lets a user select items from a menu, enter quantities, and automatically generates the final bill.</p>
+    <p><b>Key Features</b></p><ul><li>Menu with items and prices</li><li>Automatic calculation of totals for multiple items and quantities</li><li>Adds taxes or discounts to the final amount</li><li>Generates a clear, itemized bill for the customer</li><li>Stores menu items and bill records in an SQL database</li></ul>
+    <p><b>Technologies Used:</b> Python and SQL</p>
+    <p><b>My Role:</b> Individual project: designed, coded and tested it myself.</p>
+    <p><b>What I Learned:</b> Using Python lists, dictionaries, loops and functions together with SQL to store and retrieve menu and billing data, structuring a program around a real-world use case, and testing it with different inputs.</p>
+  </details>
+  <details><summary>Python Calculator <span class="badge">Python</span></summary>
+    <p>A basic calculator application that performs arithmetic operations using user inputs.</p>
+  </details>
+</div></section>
+
+<section class="view" id="v-courses"><div class="wrap">
+  <h2>Courses &amp; Learning</h2><p class="sub">Continuously building my technical, creative and professional skills.</p>
+  <div class="tabs">
+    <button class="tab on" data-f="all">All</button><button class="tab" data-f="a">Academic</button><button class="tab" data-f="b">Additional Learning</button><button class="tab" data-f="c">Skills Developing</button>
+  </div>
+  <div class="card cs" data-c="a"><h3>Academic Learning</h3><ul>
+    <li><b>B.Tech Computer Science and Engineering (AI &amp; Data Engineering):</b> VIT, Vellore | 2026–2030 | Year I (ongoing)</li>
+    <li><b>Python Programming:</b> Core programming concepts, NumPy, Pandas and regular expressions (currently learning)</li>
+    <li><b>Data Structures and Algorithms (DSA):</b> Stacks and other core structures (currently learning)</li>
+    <li><b>Object-Oriented Programming (OOPs):</b> Classes, objects, inheritance and encapsulation (currently learning)</li>
+    <li><b>Web Fundamentals (HTML):</b> Structuring web pages using HTML</li>
+    <li><b>Database Systems (SQL):</b> Storing and querying data, applied in my Restaurant Billing System</li></ul>
+    <p class="q">Academic learning is ongoing. This section will be updated as I complete more courses.</p></div>
+  <div class="card cs" data-c="b"><h3>Additional Learning &amp; Certification</h3><ul>
+    <li><b>UCMAS Graduate:</b> Training in mental arithmetic, speed and calculation accuracy</li>
+    <li><b>Baking Classes:</b> Practical learning in baking techniques and food preparation</li>
+    <li><b>Self-Makeup Masterclass:</b> Professional makeup techniques and personal grooming</li></ul></div>
+  <div class="card cs" data-c="c"><h3>Skills Currently Developing</h3><div class="chips">
+    <span class="chip">Python Programming</span><span class="chip">Data Structures and Algorithms</span><span class="chip">Object-Oriented Programming</span><span class="chip">Logical Reasoning</span><span class="chip">Problem-Solving</span><span class="chip">Technical Communication</span><span class="chip">Mathematical Modelling</span><span class="chip">Teamwork and Collaboration</span></div></div>
+</div></section>
+
+<section class="view" id="v-writing"><div class="wrap">
+  <h2>Writing</h2>
+  <div class="card">
+    <h3>Book Review: <i>Animal Farm</i> by George Orwell</h3>
+    <p class="sub">Book review | Written as a writing assessment</p>
+    <p><b>Overview</b><br><i>Animal Farm</i> (1945) is a short allegorical novella about the animals of Manor Farm, who overthrow their human farmer in the hope of building a fair society where all are equal. Over time, the pigs who lead the revolution slowly take control and become the very oppressors the animals had rebelled against.</p>
+    <p><b>Key Themes</b></p>
+    <ul><li><b>Power and corruption:</b> how those who gain power can abandon the ideals they fought for</li><li><b>Propaganda and manipulation:</b> how language and repeated slogans are used to control a population</li><li><b>Equality versus inequality:</b> how the promise of equality can be twisted into a new hierarchy</li><li><b>Blind trust and ignorance:</b> how a lack of questioning allows injustice to continue</li></ul>
+  </div>
+</div></section>
+
+<section class="view" id="v-resume"><div class="wrap">
+  <h2>UMME HANI SAGHAR</h2>
+  <p class="sub">B.Tech – Computer Science and Engineering (Artificial Intelligence &amp; Data Engineering)<br>Vellore Institute of Technology, Vellore</p>
+  <div class="btns" style="margin:0 0 20px"><a class="btn" href="mailto:umme.hanisaghar2026@vitstudent.ac.in">Email me</a></div>
+  <div class="card"><h3>Professional Summary</h3><p>A dedicated and ambitious first-year Computer Science Engineering student with a strong academic background and a keen interest in Artificial Intelligence and Data Engineering. Passionate about technology, analytical problem-solving and continuous learning. Currently developing programming skills and exploring practical applications of computing through academic and multidisciplinary projects. Aspiring to build innovative, technology-driven solutions to real-world challenges.</p></div>
+  <div class="grid2">
+    <div class="card"><h3>Education</h3><p><b>B.Tech – CSE (AI &amp; Data Engineering)</b><br>VIT, Vellore<br>2026–2030 | First Year (Ongoing)</p><p><b>Class XII</b> – Science (PCM)<br>91% | School Topper</p><p><b>Class X</b> – CBSE<br>95.6%</p></div>
+    <div class="card"><h3>Entrance Examinations</h3><ul><li>JEE Advanced – Qualified</li><li>JEE Main – 91 Percentile</li><li>COMEDK – 98 Percentile</li><li>MHT-CET – 98 Percentile</li></ul><p>Consistently ranked among the top 3–5% of the class during school.</p></div>
+    <div class="card"><h3>Technical Skills</h3><ul><li><b>Languages:</b> Python (Learning), SQL, HTML (Basic)</li><li><b>Libraries &amp; Tools:</b> NumPy, Pandas, GNU Octave</li><li><b>Concepts:</b> DSA (Learning), OOP (Learning)</li><li><b>Additional:</b> Mathematical Modelling, Logical Reasoning, Analytical Problem-Solving</li></ul></div>
+    <div class="card"><h3>Soft Skills</h3><div class="chips"><span class="chip">Public Speaking</span><span class="chip">Critical Thinking</span><span class="chip">Problem-Solving</span><span class="chip">Teamwork</span><span class="chip">Adaptability</span><span class="chip">Analytical Thinking</span></div></div>
+  </div>
+  <div class="card"><h3>Academic &amp; Technical Interests</h3><div class="chips"><span class="chip">AI and Machine Learning</span><span class="chip">Data Engineering and Analytics</span><span class="chip">Software Development</span><span class="chip">DSA</span><span class="chip">Computational Thinking</span><span class="chip">Real-World Tech Solutions</span></div></div>
+  <div class="card"><h3>Activities &amp; Additional Learning</h3><ul>
+    <li><b>Model United Nations:</b> Participated as a delegate, developing research, negotiation and public-speaking skills.</li>
+    <li><b>Speech Competitions:</b> Participated, strengthening communication and presentation abilities.</li>
+    <li><b>Podcast – The Ghost in the Machine:</b> Participated in a classroom podcast exploring whether AI can become conscious.</li>
+    <li><b>UCMAS Graduate:</b> Completed mental arithmetic training.</li>
+    <li><b>Baking Classes</b> and <b>Self-Makeup Masterclass</b></li></ul></div>
+</div></section>
+
+<footer>© Umme Hani Saghar · VIT Vellore</footer>
+
+<script>
+(function(){
+  var views=['home','projects','courses','writing','resume'],counted=false;
+  function show(){
+    var h=(location.hash||'#home').slice(1);if(views.indexOf(h)<0)h='home';
+    views.forEach(function(v){document.getElementById('v-'+v).classList.toggle('on',v===h)});
+    document.querySelectorAll('nav a').forEach(function(a){a.classList.toggle('on',a.dataset.v===h)});
+    window.scrollTo(0,0);
+    if(h==='home'&&!counted){counted=true;document.querySelectorAll('[data-n]').forEach(function(el){
+      var t=+el.dataset.n,s=el.dataset.s||'',i=0,id=setInterval(function(){i+=Math.ceil(t/30);if(i>=t){i=t;clearInterval(id)}el.textContent=i+s},30)})}
+  }
+  window.addEventListener('hashchange',show);show();
+  document.querySelectorAll('[data-p]').forEach(function(b){b.onclick=function(){
+    document.querySelectorAll('[data-p]').forEach(function(x){x.classList.toggle('on',x===b)});
+    document.querySelectorAll('.pane').forEach(function(p){p.classList.toggle('on',p.id===b.dataset.p)})}});
+  document.querySelectorAll('[data-f]').forEach(function(b){b.onclick=function(){
+    document.querySelectorAll('[data-f]').forEach(function(x){x.classList.toggle('on',x===b)});
+    document.querySelectorAll('.cs').forEach(function(c){c.hidden=b.dataset.f!=='all'&&c.dataset.c!==b.dataset.f})}});
+  document.getElementById('mode').onclick=function(){
+    var r=document.documentElement,d=r.dataset.theme==='dark'||(!r.dataset.theme&&matchMedia('(prefers-color-scheme:dark)').matches);
+    r.dataset.theme=d?'light':'dark'};
+})();
+</script>
+</body>
+</html>
