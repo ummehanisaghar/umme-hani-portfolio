@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Academic and personal portfolio of Umme Hani Saghar, a Computer Science Engineering student at VIT Vellore.">
+<title>Umme Hani Saghar | Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f0ee;--card:#fff;--ink:#2a2523;--mute:#6b605b;--brown:#7a4a12;--rose:#e8c9c6;--accent:#4a45d6;--line:#e4d8d4;color-scheme:light}
+:root[data-theme="dark"]{--bg:#1d1918;--card:#292322;--ink:#f1e9e6;--mute:#b3a6a1;--brown:#e0b070;--rose:#4a3533;--accent:#9d99ff;--line:#3d3331;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Lora,Georgia,serif;line-height:1.65}
+nav{position:sticky;top:0;z-index:20;background:var(--card);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:6px;padding:10px 16px;overflow-x:auto}
+nav .logo{font-weight:600;color:var(--brown);margin-right:auto;white-space:nowrap}
+nav a{color:var(--ink);text-decoration:none;padding:6px 14px;border-radius:20px;font-size:.92rem;white-space:nowrap}
+nav a.on,nav a:hover{background:var(--rose)}
+#mode{border:1px solid var(--line);background:none;color:var(--ink);border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:1rem;flex:0 0 auto}
+.wrap{max-width:980px;margin:0 auto;padding:0 18px}
+.hero{background:linear-gradient(135deg,var(--rose),var(--bg));padding:64px 0 48px}
+.hero h1{font-size:clamp(2rem,6vw,3.4rem);margin:0 0 8px;letter-spacing:.5px;line-height:1.2}
+.hero p{margin:4px 0;color:var(--mute)}
+.tag{font-style:italic;color:var(--brown)!important;margin-top:18px!important;font-size:1.15rem}
+.btns{margin-top:22px;display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-block;background:var(--accent);color:#fff;border:0;padding:10px 20px;border-radius:24px;text-decoration:none;font:inherit;cursor:pointer}
+.btn.alt{background:none;color:var(--ink);border:1px solid var(--accent)}
+section.view{display:none;padding:34px 0 60px}
+section.view.on{display:block;animation:in .35s ease}
+@keyframes in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+h2{color:var(--brown);font-size:1.7rem;margin:0 0 6px}
+h3{color:var(--brown);margin:0 0 6px}
+.sub{color:var(--mute);font-style:italic;margin:0 0 22px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 22px;margin-bottom:16px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:26px 0}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;text-align:center}
+.stat b{display:block;font-size:2.1rem;color:var(--accent)}
+.stat span{font-size:.85rem;color:var(--mute)}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}
+.tab{border:1px solid var(--line);background:var(--card);color:var(--ink);padding:8px 18px;border-radius:20px;cursor:pointer;font:inherit}
+.tab.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+.pane{display:none}.pane.on{display:block;animation:in .3s ease}
+.q{font-style:italic;color:var(--brown);margin-top:14px}
+ul{padding-left:20px;margin:8px 0}li{margin:5px 0}
+details{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:6px 20px;margin-bottom:14px}
+summary{cursor:pointer;font-weight:600;color:var(--brown);padding:12px 0;font-size:1.1rem}
+details p{margin:6px 0}
+.badge{display:inline-block;font-size:.75rem;background:var(--rose);border-radius:12px;padding:2px 10px;margin-left:8px;color:var(--ink);font-weight:400}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.chip{background:var(--rose);border-radius:16px;padding:5px 14px;font-size:.9rem}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.cs[hidden]{display:none}
+footer{text-align:center;color:var(--mute);padding:26px 18px;border-top:1px solid var(--line);font-size:.9rem}
+a{overflow-wrap:anywhere}
+@media(max-width:600px){nav{padding:8px}nav a{padding:6px 10px;font-size:.85rem}.hero{padding:48px 0 36px}.card{padding:17px}}
+@media print{nav,.btns,.tabs,#mode{display:none!important}section.view{display:block!important;page-break-inside:avoid}}
+</style>
+</head>
+<body>
+<nav aria-label="Main navigation">
+  <span class="logo">Umme Hani Saghar</span>
+  <a href="#home" data-v="home">Home</a><a href="#projects" data-v="projects">Projects</a><a href="#courses" data-v="courses">Courses</a><a href="#writing" data-v="writing">Writing</a><a href="#resume" data-v="resume">Resume</a>
+  <button id="mode" aria-label="Toggle dark mode" title="Toggle dark mode">◐</button>
+</nav>
+
+<section class="view" id="v-home">
+  <div class="hero"><div class="wrap">
+    <h1>UMME HANI SAGHAR</h1>
+    <p>B.Tech · Computer Science and Engineering</p>
+    <p>Specialisation: Artificial Intelligence &amp; Data Engineering</p>
+    <p>Vellore Institute of Technology, Vellore · Batch 2026–2030</p>
+    <p class="tag">Curious mind. Consistent effort. Creative heart.</p>
+    <div class="btns"><a class="btn" href="#projects">Explore my projects</a><a class="btn alt" href="#resume">View my resume</a></div>
+  </div></div>
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat"><b>98</b><span>Percentile · COMEDK</span></div>
+      <div class="stat"><b>98</b><span>Percentile · MHT-CET</span></div>
+      <div class="stat"><b>91</b><span>Percentile · JEE Main</span></div>
+      <div class="stat"><b>91%</b><span>Class XII · School Topper</span></div>
+    </div>
+    <h2>About Me</h2>
+    <div class="card">
+      <p>I am a first-year B.Tech student at Vellore Institute of Technology, pursuing Computer Science and Engineering with a specialisation in Artificial Intelligence and Data Engineering. I value consistency, curiosity and continuous improvement, and I enjoy taking on challenges that help me grow academically and personally.</p>
+      <p>I am currently developing my programming skills, particularly in Python, and exploring how technology can address practical problems. I am part of a multidisciplinary team working on an offline emergency communication network intended to help people send high-priority messages to a rescue centre when conventional connectivity is unavailable.</p>
+      <p>Beyond academics, I enjoy baking, cooking, dancing, badminton and music. I have also participated as a delegate in Model United Nations and taken part in speech and classroom podcast activities.</p>
+    </div>
+    <div class="tabs" role="tablist" aria-label="Portfolio highlights">
+      <button class="tab on" data-p="ach">Achievements</button><button class="tab" data-p="str">Strengths</button><button class="tab" data-p="goal">Goals</button>
+    </div>
+    <div class="card pane on" id="ach"><ul>
+      <li>Qualified for JEE Advanced</li><li>98 percentile in COMEDK and 98 percentile in MHT-CET</li><li>91 percentile in JEE Main</li><li>Class XII school topper with 91%; scored 95.6% in Class X</li><li>Consistently ranked among the top 3–5% of my class during school</li><li>UCMAS graduate</li></ul></div>
+    <div class="card pane" id="str"><ul>
+      <li>Dedicated and consistent approach to learning</li><li>Communication and public-speaking experience through MUN and speech competitions</li><li>Interest in analytical thinking and practical problem-solving</li><li>Teamwork and collaboration through multidisciplinary project work</li><li>Creative interests developed through baking and other activities</li></ul></div>
+    <div class="card pane" id="goal"><ul>
+      <li>Build a strong foundation in AI, Data Engineering and software development</li><li>Develop practical programming and analytical skills</li><li>Contribute to projects that address real-world challenges</li><li>Explore innovation, entrepreneurship and collaborative opportunities</li></ul></div>
+  </div>
+</section>
+
+<section class="view" id="v-projects"><div class="wrap">
+  <h2>Projects</h2><p class="sub">Selected academic and technical work. Project details can be updated as development progresses.</p>
+  <details open><summary>Offline Emergency Communication Network <span class="badge">MDP · Team Project · Ongoing</span></summary>
+    <p><b>Problem:</b> During emergencies, cellular networks or internet connectivity may become unavailable, making it difficult for people to contact rescue services.</p>
+    <p><b>Project idea:</b> Our team is exploring an offline communication network that would allow people to send short, high-priority messages to a designated rescue centre without relying on cellular internet.</p>
+    <p><b>Intended focus:</b></p><ul><li>Sending concise emergency alerts</li><li>Exploring communication when conventional connectivity is unavailable</li><li>Considering reliability and usefulness in emergency situations</li></ul>
+    <p><b>My role:</b> Team member. Specific responsibilities and technologies will be added as the design and development progress.</p>
+    <p><b>Status:</b> In progress.</p>
+  </details>
+  <details><summary>Drone Work Using Line Integrals <span class="badge">Academic Presentation</span></summary>
+    <p>An engineering mathematics presentation exploring how line integrals can be used to model work done by a force field along a drone's flight path. The presentation connects parameterisation and mathematical integration with a practical engineering context.</p>
+    <p><b>Tools:</b> GNU Octave for computational illustration.</p>
+  </details>
+  <details><summary>Rocket Mass Calculation <span class="badge">Academic Modelling</span></summary>
+    <p>An academic modelling task involving a rocket shape made from cylindrical and curved components. The work applies coordinate geometry and integration concepts to estimate volume and mass.</p>
+    <p><b>Tools:</b> GNU Octave.</p>
+  </details>
+  <div class="card"><b>Note:</b> Add other programming projects here once they are completed and tested. Include a short description, your individual contribution, technologies actually used and a screenshot or code link where possible.</div>
+</div></section>
+
+<section class="view" id="v-courses"><div class="wrap">
+  <h2>Courses &amp; Learning</h2><p class="sub">Academic foundations and skills I am developing.</p>
+  <div class="tabs">
+    <button class="tab on" data-f="all">All</button><button class="tab" data-f="a">Academic</button><button class="tab" data-f="b">Additional Learning</button><button class="tab" data-f="c">Skills Developing</button>
+  </div>
+  <div class="card cs" data-c="a"><h3>Academic Learning</h3><ul>
+    <li><b>B.Tech Computer Science and Engineering (AI &amp; Data Engineering):</b> VIT, Vellore · 2026–2030 · First year</li>
+    <li><b>Programming with Python:</b> Fundamentals and problem-solving (currently learning)</li>
+    <li><b>Engineering Mathematics:</b> Mathematical methods and modelling</li>
+    <li><b>Engineering Physics:</b> Foundations and applications of physics</li>
+    <li><b>Database concepts:</b> Introductory SQL and data handling, where covered in coursework</li></ul>
+    <p class="q">This section will be updated as I complete courses and earn certifications.</p></div>
+  <div class="card cs" data-c="b"><h3>Additional Learning &amp; Training</h3><ul>
+    <li><b>UCMAS Graduate:</b> Training in mental arithmetic and calculation</li>
+    <li><b>Baking Classes:</b> Practical learning in baking techniques and food preparation</li>
+    <li><b>Self-Makeup Masterclass:</b> Training in makeup techniques and personal grooming</li></ul></div>
+  <div class="card cs" data-c="c"><h3>Skills Currently Developing</h3><div class="chips">
+    <span class="chip">Python</span><span class="chip">Programming Fundamentals</span><span class="chip">Problem-Solving</span><span class="chip">Data Analysis</span><span class="chip">Technical Communication</span><span class="chip">Mathematical Modelling</span><span class="chip">Teamwork</span></div></div>
+</div></section>
+
+<section class="view" id="v-writing"><div class="wrap">
+  <h2>Writing &amp; Communication</h2><p class="sub">Selected writing, speaking and collaborative communication experiences.</p>
+  <div class="card">
+    <h3>Book Review: <i>Animal Farm</i> by George Orwell</h3>
+    <p class="sub">Writing assessment</p>
+    <p><b>Overview</b><br><i>Animal Farm</i> (1945) is an allegorical novella about a group of farm animals who overthrow their human owner in the hope of creating a fair society. As the story progresses, those who take leadership gradually reproduce the inequalities they once opposed.</p>
+    <p><b>Themes explored</b></p><ul><li><b>Power and corruption:</b> how authority can undermine original ideals</li><li><b>Propaganda and manipulation:</b> how language can shape public understanding</li><li><b>Equality and hierarchy:</b> how promises of fairness can be distorted</li><li><b>Critical thinking:</b> why questioning information and authority matters</li></ul>
+  </div>
+  <div class="card"><h3>Model United Nations (MUN)</h3><p>Participated as a delegate in a Model United Nations conference. The experience involved engaging with formal debate and helped me practise research, structured argument, negotiation and considering different perspectives.</p></div>
+  <div class="card"><h3>Classroom Podcast: <i>The Ghost in the Machine</i></h3><p>Participated in a classroom podcast exploring the question, “Can Artificial Intelligence Ever Become Conscious?” The discussion brought together perspectives from philosophy, neuroscience, cognitive science and machine learning, providing an opportunity to practise collaborative script development and communicate complex ideas.</p></div>
+  <div class="card"><h3>Speech Competitions &amp; Academic Presentations</h3><p>Participated in speech competitions and academic presentations, developing confidence in organising ideas and communicating them to an audience. Selected presentation materials can be added here.</p></div>
+</div></section>
+
+<section class="view" id="v-resume"><div class="wrap">
+  <h2>Resume</h2>
+  <p class="sub">Umme Hani Saghar · Computer Science and Engineering (AI &amp; Data Engineering)</p>
+  <div class="btns" style="margin:0 0 20px"><a class="btn" href="mailto:umme.hanisaghar2026@vitstudent.ac.in">Email me</a></div>
+  <div class="card"><h3>Professional Summary</h3><p>A dedicated first-year Computer Science Engineering student at VIT Vellore with a strong academic background and an interest in Artificial Intelligence and Data Engineering. Currently building programming skills and exploring practical applications of computing through academic and multidisciplinary projects. Interested in analytical problem-solving, technology and continuous learning.</p></div>
+  <div class="grid2">
+    <div class="card"><h3>Education</h3><p><b>B.Tech – CSE (AI &amp; Data Engineering)</b><br>VIT, Vellore<br>2026–2030 · Ongoing</p><p><b>Class XII – Science (PCM)</b><br>91% · School Topper</p><p><b>Class X – CBSE</b><br>95.6%</p></div>
+    <div class="card"><h3>Entrance Examinations</h3><ul><li>JEE Advanced – Qualified</li><li>JEE Main – 91 percentile</li><li>COMEDK – 98 percentile</li><li>MHT-CET – 98 percentile</li></ul><p>Consistently ranked among the top 3–5% of my class during school.</p></div>
+    <div class="card"><h3>Technical Skills</h3><ul><li><b>Programming:</b> Python – currently learning</li><li><b>Tools:</b> GNU Octave</li><li><b>Developing:</b> Programming fundamentals, analytical problem-solving and mathematical modelling</li></ul></div>
+    <div class="card"><h3>Soft Skills</h3><div class="chips"><span class="chip">Communication</span><span class="chip">Public Speaking</span><span class="chip">Critical Thinking</span><span class="chip">Problem-Solving</span><span class="chip">Teamwork</span><span class="chip">Adaptability</span></div></div>
+  </div>
+  <div class="card"><h3>Academic &amp; Technical Interests</h3><div class="chips"><span class="chip">Artificial Intelligence</span><span class="chip">Data Engineering</span><span class="chip">Data Analytics</span><span class="chip">Software Development</span><span class="chip">Computational Thinking</span><span class="chip">Real-World Technology Solutions</span></div></div>
+  <div class="card"><h3>Activities &amp; Additional Learning</h3><ul>
+    <li><b>Model United Nations:</b> Participated as a delegate.</li>
+    <li><b>Speech Competitions:</b> Participation in school-level speaking activities.</li>
+    <li><b>Podcast – The Ghost in the Machine:</b> Classroom podcast participation on AI consciousness.</li>
+    <li><b>UCMAS:</b> Graduate in mental arithmetic.</li>
+    <li><b>Additional training:</b> Baking classes and a self-makeup masterclass.</li></ul></div>
+  <div class="card"><h3>Personal Interests</h3><div class="chips"><span class="chip">Baking &amp; Cooking</span><span class="chip">Dancing</span><span class="chip">Badminton</span><span class="chip">Music</span><span class="chip">Makeup &amp; Skincare</span></div></div>
+  <p class="sub">Contact details and professional profile links can be added after you confirm the information you want to make public.</p>
+</div></section>
+
+<footer>© <span id="year"></span> Umme Hani Saghar · VIT Vellore</footer>
+<script>
+(function(){
+  var views=['home','projects','courses','writing','resume'];
+  function show(){
+    var h=(location.hash||'#home').slice(1);
+    if(!views.includes(h))h='home';
+    views.forEach(function(v){document.getElementById('v-'+v).classList.toggle('on',v===h)});
+    document.querySelectorAll('nav a').forEach(function(a){a.classList.toggle('on',a.dataset.v===h)});
+    window.scrollTo(0,0);
+  }
+  window.addEventListener('hashchange',show);show();
+  document.querySelectorAll('[data-p]').forEach(function(b){b.addEventListener('click',function(){
+    document.querySelectorAll('[data-p]').forEach(function(x){x.classList.toggle('on',x===b)});
+    document.querySelectorAll('.pane').forEach(function(p){p.classList.toggle('on',p.id===b.dataset.p)});
+  })});
+  document.querySelectorAll('[data-f]').forEach(function(b){b.addEventListener('click',function(){
+    document.querySelectorAll('[data-f]').forEach(function(x){x.classList.toggle('on',x===b)});
+    document.querySelectorAll('.cs').forEach(function(c){c.hidden=b.dataset.f!=='all'&&c.dataset.c!==b.dataset.f});
+  })});
+  document.getElementById('mode').addEventListener('click',function(){
+    var r=document.documentElement;
+    r.dataset.theme=r.dataset.theme==='dark'?'light':'dark';
+  });
+  document.getElementById('year').textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
